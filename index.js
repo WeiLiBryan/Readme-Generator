@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Included packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const util = require('util');
 
-// TODO: Create an array of questions for user input
+// array of questions for user input
 const questions = [
     "What is your GitHub username?",
     "What is your email address?",
@@ -16,13 +16,13 @@ const questions = [
     "What does the user need to know about contributing to the repo?"
 ];
 
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
 
 }
 
-// TODO: Create a function to initialize app
-async function init()  {
+// function to initialize app
+async function init() {
     try {
         const response = await ask();
 
@@ -38,11 +38,60 @@ async function init()  {
     }
 };
 
-function ask(){
-    
 
-    }
-}
+// Asks user questions
+const ask = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'github',
+            message: message[0],
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: message[1],
+        },
+        {
+            type: 'input',
+            name: 'project',
+            message: message[2],
+        },
+        {
+            type: 'input',
+            name: 'description',
+            message: message[3],
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: message[4],
+        },
+        {
+            type: 'input',
+            name: 'dependencies',
+            message: message[5],
+        },
+        {
+            type: 'input',
+            name: 'test',
+            message: message[6],
+        },
+        {
+            type: 'input',
+            name: 'repo-Info',
+            message: message[7],
+        },
+        {
+            type: 'input',
+            name: 'contribute',
+            message: message[8],
+        },
+
+    ]);
+};
+
+
 
 // Function call to initialize app
 init();
