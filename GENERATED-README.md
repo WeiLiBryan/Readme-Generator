@@ -1,8 +1,8 @@
-# README-GENERATOR
+# Readme Generator
 
 --------------------------------------
 
-Application will generate a markdown file based on prompts
+Application will generate a markdown file based on prompts given to user
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ Install using npm install
 
 ## Test
 
-Test using None
+NA
 
 ## Language
 
