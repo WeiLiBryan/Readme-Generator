@@ -3,6 +3,8 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const util = require('util');
 
+const writeFileAsync = util.promisify(fs.writeFile);
+
 // array of questions for user input
 const questions = [
     "What is your GitHub username?",
@@ -12,13 +14,14 @@ const questions = [
     "What kind of license should your project have?",
     "What command should be run to install dependencies?",
     "What command should be run to run tests?",
-    "What doe the user need to know about using the repo?",
+    "What does the user need to know about using the repo?",
     "What does the user need to know about contributing to the repo?"
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
-
+    writeFileAsync(fileName, data)
+    console.log("Readme Generated")
 }
 
 // function to initialize app
@@ -79,7 +82,7 @@ const ask = () => {
         },
         {
             type: 'input',
-            name: 'repo-Info',
+            name: 'info',
             message: questions[7],
         },
         {
@@ -91,7 +94,7 @@ const ask = () => {
     ]);
 };
 
-const markdownMaker = (response) => {
+const markdownMaker = (response) => 
 `# ${response.project}
 
 --------------------------------------
@@ -120,7 +123,7 @@ Test using ${response.test}
 
 ## Language
 
-${response.repo-info}
+${response.info}
 
 ## Contribute
 
@@ -133,8 +136,7 @@ ${response.github}
 [GitHub](https://github.com/${response.github}) | [Email](${response.email})
 
 ### [Back to Table of Contents](#table-of-contents)
-`
-}
+`;
 
 // Function call to initialize app
 init();
