@@ -29,7 +29,8 @@ async function init() {
     try {
         const response = await ask();
 
-        const md = markdownMaker(response);
+        const badge = licenseBadge(response);
+        const md = markdownMaker(response, badge);
 
         console.log("Generating README");
         writeToFile("GENERATED-README.md", md);
@@ -94,7 +95,7 @@ const ask = () => {
     ]);
 };
 
-const markdownMaker = (response) => 
+const markdownMaker = (response, badge) => 
 `# ${response.project}
 
 --------------------------------------
@@ -111,7 +112,7 @@ ${response.description}
 
 ## License
 
-${response.license}
+${badge}
 
 ## Dependencies
 
@@ -119,7 +120,7 @@ Install using ${response.dependencies}
 
 ## Test
 
-Test using ${response.test}
+${response.test}
 
 ## Language
 
@@ -137,6 +138,15 @@ ${response.github}
 
 ### [Back to Table of Contents](#table-of-contents)
 `;
+
+function licenseBadge(response) {
+    const license = response.license.toLowerCase();
+    let badge;
+    if (license === "mit"){
+        badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+        return badge;
+    } else { return response.license }
+}
 
 // Function call to initialize app
 init();

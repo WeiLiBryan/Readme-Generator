@@ -1,8 +1,8 @@
-# Readme-Generator
+# README-GENERATOR
 
 --------------------------------------
 
-Application will generate a markdown file based on prompts given to user
+Application will generate a markdown file based on prompts
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ Application will generate a markdown file based on prompts given to user
 
 ## License
 
-MIT
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Dependencies
 
@@ -22,7 +22,7 @@ Install using npm install
 
 ## Test
 
-Test using NA
+Test using None
 
 ## Language
 
