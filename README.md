@@ -23,7 +23,7 @@ None
 - Node
 - Javascript
 
-## Video Walktrough
+## Video Walkthrough
 
 [Youtube Link](https://youtu.be/FE3puOtUL-s)
 

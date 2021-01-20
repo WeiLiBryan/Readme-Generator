@@ -1,14 +1,15 @@
 # Readme Generator
 
 --------------------------------------
+## Description
 
 Application will generate a markdown file based on prompts given to user
 
 ## Table of Contents
 
-[Licenses](#License)    |   [Installation](#Installation)   |   [Test Command](#Test)
+[Licenses](#License)    |   [Install Dependencies](#Dependencies)   |   [Test Command](#Test)
 
-[Languages](#Language)  |   [Contribute](#Contribute)               |   [Author](#Author)
+[Usage Info](#Usage-Info)  |   [Contribute](#Contribute)               |   [Author](#Author)
 
 --------------------------------------
 
@@ -16,7 +17,7 @@ Application will generate a markdown file based on prompts given to user
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Installation
+## Dependencies
 
 Install using npm install
 
@@ -24,18 +25,18 @@ Install using npm install
 
 NA
 
-## Language
+## Usage Info
 
-Javascript
+Use Javascript
 
 ## Contribute
 
 Contribute using Javascript
 
-## Author
+## Questions
 
 WeiLiBryan
 
-[GitHub](https://github.com/WeiLiBryan) | [Email](wwbryan00@gmail.com)
+[GitHub](https://github.com/WeiLiBryan) | Email: wwbryan00@gmail.com
 
 ### [Back to Table of Contents](#table-of-contents)
