@@ -29,7 +29,7 @@ async function init() {
         const md = markdownMaker(response);
 
         console.log("Generating README");
-        writeToFile("GENERATE-README.md", md);
+        writeToFile("GENERATED-README.md", md);
         
     } 
     
@@ -45,53 +45,96 @@ const ask = () => {
         {
             type: 'input',
             name: 'github',
-            message: message[0],
+            message: questions[0],
         },
         {
             type: 'input',
             name: 'email',
-            message: message[1],
+            message: questions[1],
         },
         {
             type: 'input',
             name: 'project',
-            message: message[2],
+            message: questions[2],
         },
         {
             type: 'input',
             name: 'description',
-            message: message[3],
+            message: questions[3],
         },
         {
             type: 'input',
             name: 'license',
-            message: message[4],
+            message: questions[4],
         },
         {
             type: 'input',
             name: 'dependencies',
-            message: message[5],
+            message: questions[5],
         },
         {
             type: 'input',
             name: 'test',
-            message: message[6],
+            message: questions[6],
         },
         {
             type: 'input',
             name: 'repo-Info',
-            message: message[7],
+            message: questions[7],
         },
         {
             type: 'input',
             name: 'contribute',
-            message: message[8],
+            message: questions[8],
         },
 
     ]);
 };
 
+const markdownMaker = (response) => {
+`# ${response.project}
 
+--------------------------------------
+
+${response.description}
+
+## Table of Contents
+
+[Licenses](#License)    |   [Install Dependencies](#Dependencies)   |   [Test Command](#Test)
+
+[Languages](#Language)  |   [Contribute](#Contribute)               |   [Author](#Author)
+
+--------------------------------------
+
+## License
+
+${response.license}
+
+## Dependencies
+
+Install using ${response.dependencies}
+
+## Test
+
+Test using ${response.test}
+
+## Language
+
+${response.repo-info}
+
+## Contribute
+
+Contribute using ${response.contribute}
+
+## Author
+
+${response.github}
+
+[GitHub](https://github.com/${response.github}) | [Email](${response.email})
+
+### [Back to Table of Contents](#table-of-contents)
+`
+}
 
 // Function call to initialize app
 init();
