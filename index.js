@@ -22,8 +22,26 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {
+async function init()  {
+    try {
+        const response = await ask();
+
+        const md = markdownMaker(response);
+
+        console.log("Generating README");
+        writeToFile("GENERATE-README.md", md);
+        
+    } 
     
+    catch (err) {
+        console.error(err);
+    }
+};
+
+function ask(){
+    
+
+    }
 }
 
 // Function call to initialize app
