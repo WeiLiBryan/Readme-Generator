@@ -99,6 +99,7 @@ const markdownMaker = (response, badge) =>
 `# ${response.project}
 
 --------------------------------------
+## Description
 
 ${response.description}
 
@@ -106,7 +107,7 @@ ${response.description}
 
 [Licenses](#License)    |   [Install Dependencies](#Dependencies)   |   [Test Command](#Test)
 
-[Languages](#Language)  |   [Contribute](#Contribute)               |   [Author](#Author)
+[Usage Info](#Usage-Info)  |   [Contribute](#Contribute)               |   [Author](#Author)
 
 --------------------------------------
 
@@ -122,19 +123,19 @@ Install using ${response.dependencies}
 
 ${response.test}
 
-## Language
+## Usage Info
 
-${response.info}
+Use ${response.info}
 
 ## Contribute
 
 Contribute using ${response.contribute}
 
-## Author
+## Questions
 
 ${response.github}
 
-[GitHub](https://github.com/${response.github}) | [Email](${response.email})
+[GitHub](https://github.com/${response.github}) | Email: ${response.email}
 
 ### [Back to Table of Contents](#table-of-contents)
 `;
