@@ -6,7 +6,7 @@ Application will generate a markdown file based on prompts given to user
 
 ## Table of Contents
 
-[Licenses](#License)    |   [Install Dependencies](#Dependencies)   |   [Test Command](#Test)
+[Licenses](#License)    |   [Installation](#Installation)   |   [Test Command](#Test)
 
 [Languages](#Language)  |   [Contribute](#Contribute)               |   [Author](#Author)
 
@@ -16,7 +16,7 @@ Application will generate a markdown file based on prompts given to user
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Dependencies
+## Installation
 
 Install using npm install
 

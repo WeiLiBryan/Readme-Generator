@@ -10,7 +10,6 @@
 
 [License](#License) |   [Acknowledgements](#Acknowledgements)
 
-
 ## Description
 
 Application will generate a markdown file based on prompts given to user
